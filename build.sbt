@@ -1,4 +1,4 @@
-name := "scala-intro"
+name := "obj3-2015c1-scala-intro"
 
 version := "1.0"
 
