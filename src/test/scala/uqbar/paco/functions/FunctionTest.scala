@@ -1,9 +1,8 @@
 package uqbar.paco.functions
 
-import org.scalatest.matchers.ShouldMatchers
-import org.scalatest.FlatSpec
+import org.scalatest.{FlatSpec, Matchers}
 
-class FunctionTest extends FlatSpec with ShouldMatchers {
+class FunctionTest extends FlatSpec with Matchers {
   val doble = new IntFunction({ _ * 2})
   val masCinco = new IntFunction({ _ + 5})
   val minConOcho = new IntFunction(8.min)

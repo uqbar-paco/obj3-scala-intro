@@ -1,12 +1,12 @@
 package uqbar.paco.admuniv
 
-import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.FlatSpec
 import uqbar.paco.admuniv.acad.Materia
 import uqbar.paco.admuniv.acad.Alumno
 import uqbar.paco.admuniv.acad.Materia
+import org.scalatest.Matchers
 
-class AlumnoTest extends FlatSpec with ShouldMatchers {
+class AlumnoTest extends FlatSpec with Matchers {
   val intro = new Materia("Intro")
   val orga = new Materia("Orga")
   val obj1 = new Materia("Obj1")
