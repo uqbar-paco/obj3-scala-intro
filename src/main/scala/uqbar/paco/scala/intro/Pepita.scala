@@ -1,3 +1,5 @@
+package uqbar.paco.scala.intro
+
 import scala.collection.mutable.ListBuffer
 
 class Golondrina(var energia: Int) {
