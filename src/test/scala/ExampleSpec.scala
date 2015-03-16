@@ -1,12 +1,21 @@
-import org.scalatest._
+import org.scalatest.{FlatSpec, Matchers}
 
-class ExampleSpec extends FlatSpec with Matchers {
+class BaseSpec extends FlatSpec with Matchers
 
-  "Un test" should "correr dentro del IDE" in {
-    1 should be (1)
+class ExampleSpec extends BaseSpec {
+  "Una golondrina" should "perder energia al volar" in {
+    val pepita = new Golondrina(100)
+    pepita.energia should be (100)
+
+    pepita.volar(75)
+    pepita.energia should be (25)
   }
 
-  it should "fallar dentro del IDE" in {
-    1 should be (2)
+  it should "saber sus viajes largos" in {
+    val pepita = new Golondrina(100)
+    pepita.volar(75)
+    pepita.volar(50)
+
+    pepita.viajesLargos should be (List(75))
   }
 }
