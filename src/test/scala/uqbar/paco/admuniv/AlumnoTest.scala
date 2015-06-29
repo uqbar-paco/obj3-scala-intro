@@ -1,10 +1,13 @@
 package uqbar.paco.admuniv
 
 import org.scalatest.FlatSpec
+
 import uqbar.paco.admuniv.acad.Materia
 import uqbar.paco.admuniv.acad.Alumno
 import uqbar.paco.admuniv.acad.Materia
 import org.scalatest.Matchers
+
+import uqbar.paco.implicits.AdmUnivImplicits._
 
 class AlumnoTest extends FlatSpec with Matchers {
   val intro = new Materia("Intro")
@@ -34,6 +37,7 @@ class AlumnoTest extends FlatSpec with Matchers {
   roque.curso(obj1, 2014, 8)
   roque.curso(estr, 2015, 2)
   
+  
   val funcionesAnio = List(pepe.cursoEnAnio(_:Int,intro), roque.cursoEnAnio(_:Int,estr))
 //  val funcionesMat = List(pepe.cursoEn(2014,_:Materia), roque.cursoEn(2014,_:Materia))
 //  val funcionesGente = List( 
@@ -42,6 +46,14 @@ class AlumnoTest extends FlatSpec with Matchers {
 //   )
   val funcionesMat = Set(pepe,roque) map { a => a.cursoEnAnio(2014,_:Materia) }
   val funcionesGente = Set(intro,bd) map { m => { alu: Alumno => alu.cursoEnAnio(2014,m) } }
+  
+  "implicit definitions" should "apply if imported" in {
+    intro.startsWith("I") shouldBe true
+    orga.startsWith("R") shouldBe false
+    roque.contains(mate1) shouldBe true
+    roque.contains(orga) shouldBe false
+  }
+  
   "aplicacion parcial" should "no romperse" in {
     List(ana,roque).map { 
       pepe.materiasQueCursoCon(_).toSet 

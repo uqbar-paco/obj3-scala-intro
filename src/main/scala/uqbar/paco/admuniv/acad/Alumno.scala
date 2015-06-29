@@ -2,7 +2,7 @@ package uqbar.paco.admuniv.acad
 
 import scala.collection.mutable.Set
 
-class Alumno(var nombre: String) {
+class Alumno(var nombre: String, var legajo: Int = 0) {
   var cursadas = List[Cursada]()
   
   def addToCursadas(c: Cursada) { cursadas = c :: cursadas }
