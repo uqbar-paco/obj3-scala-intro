@@ -1,7 +1,6 @@
-package uqbar.paco.implicits
+package uqbar.paco.implicits.campeonato
 
-import uqbar.paco.admuniv.acad.Alumno
-import uqbar.paco.admuniv.acad.Materia
+import uqbar.paco.admuniv.acad.{Alumno, Materia}
 
 object AdmUnivImplicits {
   implicit def materiaToString(m: Materia) = m.nombre

@@ -1,9 +1,7 @@
-package uqbar.paco.implicits
+package uqbar.paco.implicits.campeonato
 
-import org.scalatest.Matchers
-import org.scalatest.FlatSpec
-
-import uqbar.paco.implicits.CampeonatoImplicits._
+import org.scalatest.{FlatSpec, Matchers}
+import uqbar.paco.implicits.campeonato.CampeonatoImplicits._
 
 class CampeonatoTest extends FlatSpec with Matchers {
   Campeonato.addToEquipos(new Equipo("Comu"))

@@ -6,8 +6,9 @@ import uqbar.paco.admuniv.acad.Materia
 import uqbar.paco.admuniv.acad.Alumno
 import uqbar.paco.admuniv.acad.Materia
 import org.scalatest.Matchers
+import uqbar.paco.implicits.campeonato.AdmUnivImplicits
 
-import uqbar.paco.implicits.AdmUnivImplicits._
+import AdmUnivImplicits._
 
 class AlumnoTest extends FlatSpec with Matchers {
   val intro = new Materia("Intro")

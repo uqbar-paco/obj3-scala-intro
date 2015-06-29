@@ -1,4 +1,4 @@
-package uqbar.paco.implicits
+package uqbar.paco.implicits.campeonato
 
 class Equipo(val nombre: String) {
   def leGanoDeLocalA(vis: Equipo) = {
